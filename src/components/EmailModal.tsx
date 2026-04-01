@@ -60,6 +60,9 @@ export default function EmailModal({ open, onClose, showSuccess }: EmailModalPro
         >
           <div className="absolute inset-0 bg-black/40" />
           <motion.div
+            role="dialog"
+            aria-modal="true"
+            aria-label={locale.modal.title}
             className="relative bg-white rounded-2xl p-8 w-full max-w-md shadow-xl"
             onClick={(e) => e.stopPropagation()}
             initial={{ opacity: 0, scale: 0.95, y: 10 }}
@@ -102,11 +105,16 @@ export default function EmailModal({ open, onClose, showSuccess }: EmailModalPro
                     <p className="text-xl font-bold text-brown">{locale.modal.title}</p>
                     <p className="text-body-light text-sm">{locale.modal.subtitle}</p>
                   </div>
+                  <label htmlFor="email-modal" className="sr-only">
+                    {locale.emailSignup.placeholder}
+                  </label>
                   <input
+                    id="email-modal"
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder={locale.emailSignup.placeholder}
+                    autoComplete="email"
                     required
                     className="w-full px-6 py-4 rounded-full border border-gray-200 bg-white text-body placeholder:text-gray-300 text-sm focus:outline-none focus:border-coral transition-colors"
                   />

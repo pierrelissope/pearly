@@ -26,12 +26,21 @@ export default function EmailSignup({ onCtaClick, onSubmitSuccess }: EmailSignup
   };
 
   return (
-    <div className="w-full max-w-md mx-auto space-y-4 px-6 py-4">
+    <div
+      className="w-full max-w-md mx-auto space-y-4 px-6 py-4"
+      role="form"
+      aria-label="Inscription newsletter"
+    >
+      <label htmlFor="email-signup" className="sr-only">
+        {locale.emailSignup.placeholder}
+      </label>
       <input
+        id="email-signup"
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder={locale.emailSignup.placeholder}
+        autoComplete="email"
         className="w-full px-6 py-4 rounded-full border border-gray-200 bg-white text-body placeholder:text-gray-300 text-sm md:text-base focus:outline-none focus:border-coral transition-colors"
       />
       {status === "error" && <p className="text-red-500 text-xs text-center">{errorMessage}</p>}

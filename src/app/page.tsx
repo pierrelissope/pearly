@@ -1,9 +1,51 @@
 import Image from "next/image";
 import LandingPage from "@/components/LandingPage";
+import { locale } from "@/lib/locale";
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://pearly.fr";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      name: "Pearly",
+      url: siteUrl,
+      logo: `${siteUrl}/img/logo.png`,
+      description: locale.meta.description,
+      sameAs: [],
+    },
+    {
+      "@type": "WebSite",
+      name: "Pearly",
+      url: siteUrl,
+      description: locale.meta.description,
+      inLanguage: "fr-FR",
+    },
+    {
+      "@type": "WebPage",
+      name: locale.meta.title,
+      description: locale.meta.description,
+      url: siteUrl,
+      isPartOf: { "@type": "WebSite", url: siteUrl },
+      about: {
+        "@type": "InsuranceAgency",
+        name: "Pearly",
+        description: locale.hero.subtitle,
+      },
+    },
+  ],
+};
 
 export default function Home() {
   return (
     <div className="relative overflow-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <Image
         src="/img/fleur1.png"
         alt=""
