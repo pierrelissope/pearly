@@ -1,9 +1,5 @@
 import Image from "next/image";
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import DiseaseSection from "@/components/DiseaseSection";
-import EmailSignup from "@/components/EmailSignup";
-import SimpleGesture from "@/components/SimpleGesture";
+import LandingPage from "@/components/LandingPage";
 
 export default function Home() {
   return (
@@ -32,13 +28,7 @@ export default function Home() {
         className="absolute bottom-0 right-0 hidden md:block md:w-36 lg:w-60 pointer-events-none"
         aria-hidden="true"
       />
-      <Header />
-      <main className="relative z-1">
-        <Hero />
-        <DiseaseSection />
-        <EmailSignup />
-        <SimpleGesture />
-      </main>
+      <LandingPage />
     </div>
   );
 }

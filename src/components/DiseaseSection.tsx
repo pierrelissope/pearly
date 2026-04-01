@@ -24,9 +24,7 @@ export default function DiseaseSection() {
                 height={78}
                 className="w-16 h-16 md:w-20 md:h-20"
               />
-              <span className="text-sm font-bold text-brown text-center">
-                {card.label}
-              </span>
+              <span className="text-sm font-bold text-brown text-center">{card.label}</span>
             </div>
           ))}
         </div>

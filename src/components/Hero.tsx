@@ -2,7 +2,11 @@ import Image from "next/image";
 import Button from "./Button";
 import { locale } from "@/lib/locale";
 
-export default function Hero() {
+interface HeroProps {
+  onCtaClick: () => void;
+}
+
+export default function Hero({ onCtaClick }: HeroProps) {
   return (
     <section className="w-full px-6 md:px-12 py-8 md:py-16 overflow-hidden">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
@@ -21,10 +25,8 @@ export default function Hero() {
             {locale.hero.description}
           </p>
           <div className="space-y-3">
-            <Button>{locale.hero.cta}</Button>
-            <p className="text-xs md:text-sm font-bold text-brown">
-              {locale.hero.disclaimer}
-            </p>
+            <Button onClick={onCtaClick}>{locale.hero.cta}</Button>
+            <p className="text-xs md:text-sm font-bold text-brown">{locale.hero.disclaimer}</p>
           </div>
         </div>
         <div className="md:basis-1/2 md:min-w-0 flex justify-center md:justify-end">

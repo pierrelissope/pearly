@@ -2,7 +2,11 @@ import Image from "next/image";
 import Button from "./Button";
 import { locale } from "@/lib/locale";
 
-export default function SimpleGesture() {
+interface SimpleGestureProps {
+  onCtaClick: () => void;
+}
+
+export default function SimpleGesture({ onCtaClick }: SimpleGestureProps) {
   return (
     <section className="w-full px-6 md:px-12 py-12 md:py-16">
       <div className="max-w-4xl mx-auto space-y-8">
@@ -26,7 +30,7 @@ export default function SimpleGesture() {
               {locale.simpleGesture.description}
             </p>
             <div className="space-y-3">
-              <Button>{locale.simpleGesture.cta}</Button>
+              <Button onClick={onCtaClick}>{locale.simpleGesture.cta}</Button>
               <p className="text-xs md:text-sm font-bold text-brown">
                 {locale.simpleGesture.disclaimer}
               </p>

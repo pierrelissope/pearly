@@ -54,4 +54,13 @@ export const locale = {
     cta: "Recevoir les informations au lancement",
     disclaimer: "Gratuit • Sans engagement • Aucun paiement",
   },
+  modal: {
+    title: "Restez informé(e) du lancement",
+    subtitle: "Entrez votre email pour être prévenu(e) dès que Pearly sera disponible.",
+    loading: "Envoi en cours...",
+    successTitle: "Merci !",
+    successMessage:
+      "Votre email a bien été enregistré. Vous serez informé(e) dès le lancement de Pearly.",
+    close: "Fermer",
+  },
 } as const;
