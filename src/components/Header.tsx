@@ -13,7 +13,7 @@ export default function Header() {
       variants={fadeIn}
     >
       <div className="max-w-6xl mx-auto">
-        <Image src="/img/logo.svg" alt="Pearly" width={60} height={60} priority />
+        <Image src="/img/logo.svg" alt="Pearly" width={100} height={100} priority />
       </div>
     </motion.header>
   );
