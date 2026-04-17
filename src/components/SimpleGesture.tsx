@@ -54,9 +54,9 @@ export default function SimpleGesture({ onCtaClick }: SimpleGestureProps) {
             <motion.p className="text-sm md:text-base text-body-light" variants={fadeUp}>
               {locale.simpleGesture.description}
             </motion.p>
-            <motion.div className="space-y-3" variants={fadeUp}>
+            <motion.div className="flex flex-col items-center space-y-3" variants={fadeUp}>
               <Button onClick={onCtaClick}>{locale.simpleGesture.cta}</Button>
-              <p className="text-xs md:text-sm font-bold text-brown">
+              <p className="text-xs md:text-sm font-bold text-brown text-center">
                 {locale.simpleGesture.disclaimer}
               </p>
             </motion.div>

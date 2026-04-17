@@ -39,9 +39,9 @@ export default function Hero({ onCtaClick }: HeroProps) {
           <motion.p className="text-body-light text-[clamp(0.75rem,1.2vw,1rem)]" variants={fadeUp}>
             {locale.hero.description}
           </motion.p>
-          <motion.div className="space-y-3" variants={fadeUp}>
+          <motion.div className="flex flex-col items-center space-y-3" variants={fadeUp}>
             <Button onClick={onCtaClick}>{locale.hero.cta}</Button>
-            <p className="text-xs md:text-sm font-bold text-brown">{locale.hero.disclaimer}</p>
+            <p className="text-xs md:text-sm font-bold text-brown text-center">{locale.hero.disclaimer}</p>
           </motion.div>
         </motion.div>
         <motion.div
