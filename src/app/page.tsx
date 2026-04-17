@@ -11,7 +11,7 @@ const jsonLd = {
       "@type": "Organization",
       name: "Pearly",
       url: siteUrl,
-      logo: `${siteUrl}/img/logo.png`,
+      logo: `${siteUrl}/img/logo.svg`,
       description: locale.meta.description,
       sameAs: [],
     },

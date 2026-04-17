@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   creator: "Pearly",
   publisher: "Pearly",
   icons: {
-    icon: "/img/logo.png",
-    apple: "/img/logo.png",
+    icon: "/img/logo.svg",
+    apple: "/img/logo.svg",
   },
   openGraph: {
     type: "website",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     description: locale.meta.description,
     images: [
       {
-        url: "/img/logo.png",
+        url: "/img/logo.svg",
         width: 512,
         height: 512,
         alt: "Pearly - Assurance maladies graves chiens et chats",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: locale.meta.title,
     description: locale.meta.description,
-    images: ["/img/logo.png"],
+    images: ["/img/logo.svg"],
   },
   robots: {
     index: true,
